@@ -9,13 +9,18 @@
     "test": "node --harmony-rest-parameters ./node_modules/.bin/_mocha tests/*.js && ./node_modules/.bin/eslint .",
     "test-strong-mode": "node --harmony-rest-parameters --strong_mode ./node_modules/.bin/_mocha tests/*.js"
   },
-  "author": "",
+  "author": "Ivan Kozik",
   "license": "ISC",
+  "repository": "ludios/intreader",
   "devDependencies": {
     "ayy": "^0.2.4",
     "better-buffer-inspect": "^0.1.4",
     "bluebird": "^2.10.1",
     "eslint": "^1.5.1",
     "mocha": "^2.3.3"
+  },
+  "engines": {
+    "iojs": ">= 2.0.0",
+    "node": ">= 4.0.0"
   }
 }
