@@ -1,14 +1,20 @@
 {
   "name": "intreader",
   "version": "1.0.0",
-  "description": "",
+  "description": "Streamable uint32-prefixed frame decoder for node.  Supports both little-endian and big-endian sizes.  Size can include or exclude the 4 bytes of length itself.  No O(N^2) problems on data trickling in.  No dependencies.",
   "homepage": "https://github.com/ludios/intreader",
   "issues": "https://github.com/ludios/intreader/issues",
   "main": "index.js",
   "scripts": {
-    "test": "node --harmony-rest-parameters ./node_modules/.bin/_mocha tests/*.js && ./node_modules/.bin/eslint .",
-    "test-strong-mode": "node --harmony-rest-parameters --strong_mode ./node_modules/.bin/_mocha tests/*.js"
+    "test": "node ./node_modules/.bin/_mocha tests/*.js && ./node_modules/.bin/eslint .",
+    "test-strong-mode": "node --strong-mode ./node_modules/.bin/_mocha tests/*.js"
   },
+  "keywords": [
+    "decode",
+    "decoder",
+    "frame",
+    "binary"
+  ],
   "author": "Ivan Kozik",
   "license": "ISC",
   "repository": "ludios/intreader",
