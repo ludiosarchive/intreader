@@ -1,0 +1,5 @@
+/build
+/*.tgz
+/.npmignore
+/.gitignore
+/.travis.yml
