@@ -65,9 +65,13 @@ class Int32Reader extends Transform {
 
 		let readInt;
 		if(endianness === "LE") {
-			readInt = (b) => b.readUInt32LE(0);
+			readInt = function(b) {
+				return b.readUInt32LE(0);
+			};
 		} else if(endianness === "BE") {
-			readInt = (b) => b.readUInt32BE(0);
+			readInt = function(b) {
+				return b.readUInt32BE(0);
+			};
 		} else {
 			throw new Error(`endianness must be "LE" or "BE", was ${inspect(endianness)}`);
 		}
@@ -99,7 +103,7 @@ class Int32Reader extends Transform {
 			//console.error(data.length, this._mode);
 			if(this._mode === MODE_LEN) {
 				if(data.length >= 4) {
-					this._currentLength = this._readInt(data.slice(0, 4));
+					this._currentLength = this._readInt(data);
 					if(this._lengthIncludesInt) {
 						if(this._currentLength < 4) {
 							callback(new BadData(
