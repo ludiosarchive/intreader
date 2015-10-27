@@ -1,6 +1,6 @@
 {
   "name": "intreader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Streamable uint32-prefixed frame decoder for node.  Supports both little-endian and big-endian sizes.  Size can include or exclude the 4 bytes of length itself.  No O(N^2) problems on data trickling in.  No dependencies.",
   "homepage": "https://github.com/ludios/intreader",
   "issues": "https://github.com/ludios/intreader/issues",
@@ -21,8 +21,8 @@
   "devDependencies": {
     "ayy": "^0.2.4",
     "better-buffer-inspect": "^0.1.4",
-    "bluebird": "^2.10.1",
-    "eslint": "^1.5.1",
+    "bluebird": "^3.0.0",
+    "eslint": "^1.7.3",
     "mocha": "^2.3.3"
   },
   "engines": {
